@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:latest -f pacman/docker/Dockerfile . | tee build.log
+      - docker build -t $REPOSITORY_NAME:latest -f pacman/docker/Dockerfile . | tee build.log
       - echo List Docker images...
       - docker images
       - cat build.log
