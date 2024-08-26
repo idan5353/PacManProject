@@ -10,4 +10,4 @@ phases:
     commands:
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_NAME:latest -f pacman/docker/Dockerfile .
-      - docker push $REPOSITORY_URI:latest
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$REPOSITORY_NAME:latest
