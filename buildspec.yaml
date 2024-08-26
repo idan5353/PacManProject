@@ -11,5 +11,9 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t $REPOSITORY_NAME:latest -f pacman/docker/Dockerfile .
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$REPOSITORY_NAME:latest
+      - docker build -t $REPOSITORY_URI:latest -f pacman/docker/Dockerfile . | tee build.log
+      - echo List Docker images...
+      - docker images
+      - cat build.log
+      - echo Pushing the Docker image to ECR...
+      - docker push $REPOSITORY_URI:latest || { echo "Docker push failed"; exit 1; }
