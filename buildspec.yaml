@@ -16,4 +16,4 @@ phases:
       - docker images
       - cat build.log
       - echo Pushing the Docker image to ECR...
-      - docker push $REPOSITORY_URI:latest || { echo "Docker push failed"; exit 1; }
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$REPOSITORY_NAME:latest
