@@ -17,3 +17,4 @@ phases:
       - cat build.log
       - echo Pushing the Docker image to ECR...
       - docker push $REPOSITORY_URI:latest || { echo "Docker push failed"; exit 1; }
+      - docker push $REPOSITORY_URI:v1.0.0
