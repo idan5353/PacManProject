@@ -10,4 +10,4 @@ phases:
     commands:
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest -f pacman/docker/Dockerfile .
-      - docker push $REPOSITORY_URI:latest -f pacman/ .
+      - docker push $REPOSITORY_URI:latest -f pacman/ 
