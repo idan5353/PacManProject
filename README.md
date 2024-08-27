@@ -103,4 +103,4 @@ For any questions or issues, please reach out to:
 
 ---
 
-**Pac-Man Game - AWS PROJECT** © 2024 by Idan Uziel. Built with ❤️ for classic arcade fans.
+**Pac-Man Game - AWS Project** © 2024 by Idan Uziel. Built with ❤️ for classic arcade fans.
