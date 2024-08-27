@@ -14,8 +14,8 @@
 - Optional Grafana/Prometheus dashboard for cluster monitoring.
   
 ## 
-.
-.
+
+
   ![pacmanDrawIO](https://github.com/user-attachments/assets/46a6765b-95fb-411e-9e80-4cb7b46328be)
 
 
