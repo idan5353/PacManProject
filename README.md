@@ -103,7 +103,6 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ## Contact
 
-For any questions or issues, please reach out to:
 
 - **Name**: Idan Uziel
 - **Email**: idanu55@gmail.com
