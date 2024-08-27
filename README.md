@@ -1,4 +1,4 @@
-# Pac-Man Game on AWS
+# Idan Uziel Project - Pac-Man Game 
 
 ![pacman pic](https://github.com/user-attachments/assets/1c1d683b-ea36-4873-b787-e56914a5cfb3)
 
@@ -106,8 +106,8 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 For any questions or issues, please reach out to:
 
-- **Name**: Your Name
-- **Email**: your.email@example.com
+- **Name**: Idan Uziel
+- **Email**: idanu55@gmail.com
 - **GitHub**: [@yourusername](https://github.com/yourusername)
 
 ---
