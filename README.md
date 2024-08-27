@@ -1,6 +1,5 @@
 # Pac-Man Game on AWS
 
-![Pac-Man Logo](https://via.placeholder.com/150x100?text=Pac-Man)
 ![pacman pic](https://github.com/user-attachments/assets/1c1d683b-ea36-4873-b787-e56914a5cfb3)
 
 ## Overview
