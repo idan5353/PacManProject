@@ -16,7 +16,8 @@
 ## 
 .
 .
-  ![pacmanDrawIO](https://github.com/user-attachments/assets/9777cfcc-1808-4967-9a18-1e88e0dd0274)
+  ![pacmanDrawIO](https://github.com/user-attachments/assets/46a6765b-95fb-411e-9e80-4cb7b46328be)
+
 
  
 
