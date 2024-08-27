@@ -2,11 +2,16 @@ apiVersion: v1
 kind: Service
 metadata:
   name: pacman-service
+  annotations:
+    kubernetes.io/ingress.class: "alb"
+    alb.ingress.kubernetes.io/scheme: internet-facing # or internal
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"port":80,"protocol":"HTTP"}]'
 spec:
-  type: LoadBalancer
-  selector:
-    app: pacman
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 8080
+  selector:
+    app: pacman
+  type: NodePort
