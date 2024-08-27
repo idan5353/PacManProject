@@ -13,7 +13,7 @@
 - MongoDB database using StatefulSets and Persistent Volumes.
 - Optional Grafana/Prometheus dashboard for cluster monitoring.
   
-## A diagram That Explains The Project Services And Actions:
+
 .
 .
   ![pacmanDrawIO](https://github.com/user-attachments/assets/9777cfcc-1808-4967-9a18-1e88e0dd0274)
