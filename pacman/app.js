@@ -26,6 +26,10 @@ app.use('/highscores', highscores);
 app.use('/user', user);
 app.use('/location', loc);
 
+app.get('/health', function(req, res) {
+    // Respond with a simple message indicating the service is up
+    res.status(200).send('OK');
+});
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
