@@ -7,6 +7,11 @@ var assert = require('assert');
 
 // Constants
 
+// Health Check Route
+app.get('/health', function(req, res) {
+    res.status(200).send('OK');
+});
+
 // Routes
 var highscores = require('./routes/highscores');
 var user = require('./routes/user');
