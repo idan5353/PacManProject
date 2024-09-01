@@ -1,6 +1,6 @@
 # Providers
 provider "aws" {
-  region = "us-west-2"  # Choose your region
+  region  = "us-west-2"
   profile = "idanuziel"
 }
 
@@ -76,6 +76,65 @@ resource "aws_route_table_association" "c" {
   route_table_id = aws_route_table.rt.id
 }
 
+# Security Groups
+resource "aws_security_group" "eks_nodes_sg" {
+  vpc_id = aws_vpc.main.id
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "eks-nodes-sg"
+  }
+}
+
+resource "aws_security_group" "elb_sg" {
+  vpc_id = aws_vpc.main.id
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "elb-sg"
+  }
+}
+
 # IAM Roles and Policies
 resource "aws_iam_role" "eks_role" {
   name = "eks-cluster-role"
@@ -97,6 +156,11 @@ resource "aws_iam_role" "eks_role" {
 resource "aws_iam_role_policy_attachment" "eks_policy" {
   role       = aws_iam_role.eks_role.name
   policy_arn  = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+}
+
+resource "aws_iam_role_policy_attachment" "eks_service_policy" {
+  role      = aws_iam_role.eks_role.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
 }
 
 resource "aws_iam_role" "node_instance_role" {
@@ -137,24 +201,26 @@ resource "aws_ecr_repository" "app_repo" {
 }
 
 output "ecr_repository_url" {
-  value = aws_ecr_repository.app_repo.repository_url
+  value = "491085395701.dkr.ecr.us-west-2.amazonaws.com/my-app"
 }
 
-# EKS Cluster and Node Group
+# EKS Cluster
 resource "aws_eks_cluster" "cluster" {
   name     = "my-eks-cluster"
   role_arn  = aws_iam_role.eks_role.arn
-  version  = "1.24"
+  version  = "1.30"
 
   vpc_config {
-    subnet_ids = [
+    subnet_ids         = [
       aws_subnet.subnet1.id,
       aws_subnet.subnet2.id,
       aws_subnet.subnet3.id
     ]
+    security_group_ids = [aws_security_group.eks_nodes_sg.id]
   }
 }
 
+# Node Group
 resource "aws_eks_node_group" "node_group" {
   cluster_name    = aws_eks_cluster.cluster.name
   node_group_name = "eks-node-group"
@@ -172,4 +238,3 @@ resource "aws_eks_node_group" "node_group" {
 
   instance_types = ["t3.medium"]
 }
-
