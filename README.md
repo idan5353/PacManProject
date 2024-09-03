@@ -1,7 +1,7 @@
 # Idan Uziel Project - Pac-Man Game 🎮🥇
-🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡
-![pacman pic](https://github.com/user-attachments/assets/1c1d683b-ea36-4873-b787-e56914a5cfb3)
 
+![pacman pic](https://github.com/user-attachments/assets/1c1d683b-ea36-4873-b787-e56914a5cfb3)
+🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡
 ## Overview
 
 **Pac-Man Game** is a classic arcade game deployed on AWS. This project showcases a complete deployment pipeline using modern DevOps practices. It includes provisioning infrastructure with Terraform, creating an EKS cluster, setting up CI/CD pipelines, and deploying a MongoDB StatefulSet.
