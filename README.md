@@ -1,4 +1,4 @@
-# Idan Uziel Project - Pac-Man Game 
+# Idan Uziel Project - Pac-Man Game ᗧ···ᗣ···ᗣ··
 
 ![pacman pic](https://github.com/user-attachments/assets/1c1d683b-ea36-4873-b787-e56914a5cfb3)
 
