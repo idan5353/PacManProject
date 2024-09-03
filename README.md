@@ -78,7 +78,7 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 
 ## Screenshots📸
 
-![pacmanScreenShot1](https://github.com/user-attachments/assets/e8cf8d44-1075-4fdf-b1ff-867336682114)
+![pacmanScreenShot1](https://github.com/user-attachments/assets/e8cf8d44-1075-4fdf-b1ff-867336682114 = 250x)
 
 
 ![pacmanScreenShot2](https://github.com/user-attachments/assets/d1d2b45a-20d5-4eab-8fa5-d2e84ece9395)
