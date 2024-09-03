@@ -77,8 +77,8 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 3. Collect all pellets and avoid the ghosts to achieve the highest score.
 
 ## Screenshots📸
-<img src="https://github.com/user-attachments/assets/ca089712-8e03-4a7e-a6e6-1b3c41d94eb5" width="650">
-![BeFunky-collage (3)](https://github.com/user-attachments/assets/ca089712-8e03-4a7e-a6e6-1b3c41d94eb5)
+<img src="https://github.com/user-attachments/assets/ca089712-8e03-4a7e-a6e6-1b3c41d94eb5">
+
 <img src="https://github.com/user-attachments/assets/e8cf8d44-1075-4fdf-b1ff-867336682114" width="650">
 
 
