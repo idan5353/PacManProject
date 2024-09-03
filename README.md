@@ -65,7 +65,7 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 6. **Deploy MongoDB:**
     - Used Kubernetes StatefulSets and Persistent Volumes to deploy MongoDB. Ensured MongoDB configuration aligns with best practices for high availability and data persistence.
 
-7. **Optional - Monitoring Setup:**
+7. **Monitoring Setup:**
     - Installed Grafana and Prometheus on your EKS cluster.
     - Configured Prometheus to scrape metrics from your Kubernetes nodes and pods.
     - Created Grafana dashboards to visualize CPU, Memory, and Storage utilization.
