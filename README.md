@@ -81,8 +81,8 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 
 <img src="https://github.com/user-attachments/assets/e8cf8d44-1075-4fdf-b1ff-867336682114" width="650">
 
-![pacmanScreenShot2](https://github.com/user-attachments/assets/d1d2b45a-20d5-4eab-8fa5-d2e84ece9395)
 
+<img src="https://github.com/user-attachments/assets/d1d2b45a-20d5-4eab-8fa5-d2e84ece9395" width="650">
 
 ## Dashboard for Kubernetes Cluster Monitoring Using Grafana/Prometheus📊
 ![BeFunky-collage (2)](https://github.com/user-attachments/assets/c118d106-719b-4f1f-978b-d144825b5a44)
