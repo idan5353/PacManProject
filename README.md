@@ -81,6 +81,9 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 
 ![Screenshot 2](https://via.placeholder.com/600x400?text=Screenshot+2)
 
+## Dashboard for Kubernetes Cluster Monitoring 
+![BeFunky-collage](https://github.com/user-attachments/assets/f53e4654-6d69-415b-8b66-d12a804203fd)
+
 ## Contributing
 
 We welcome contributions to improve the Pac-Man game or deployment setup. To contribute:
