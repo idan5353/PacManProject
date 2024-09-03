@@ -12,7 +12,7 @@
 - Exposed via an AWS Load Balancer.
 - CI/CD pipeline for automated builds and deployments.
 - MongoDB database using StatefulSets and Persistent Volumes.
-- Optional Grafana/Prometheus dashboard for cluster monitoring.
+- Grafana/Prometheus dashboard for cluster monitoring.
   
 ## 
 
