@@ -1,13 +1,13 @@
-# Idan Uziel Project - Pac-Man Game 🎮🥇
+# Idan Uziel Project - Pac-Man Game 🎮🥇☁️
 
 ![pacman pic](https://github.com/user-attachments/assets/1c1d683b-ea36-4873-b787-e56914a5cfb3)
 
 🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡
-## Overview
+## Overview🔎
 
 **Pac-Man Game** is a classic arcade game deployed on AWS. This project showcases a complete deployment pipeline using modern DevOps practices. It includes provisioning infrastructure with Terraform, creating an EKS cluster, setting up CI/CD pipelines, and deploying a MongoDB StatefulSet.
 
-**Features:**
+**Features🧩:**
 - Deployed on AWS using Terraform and EKS.
 - Exposed via an AWS Load Balancer.
 - CI/CD pipeline for automated builds and deployments.
@@ -22,7 +22,7 @@
 
  
 
-## Source Code
+## Source Code</>
 
 The source code for the Pac-Man game can be found here: [Pac-Man GitHub Repository](https://github.com/font/pacman).
 
@@ -34,7 +34,7 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 2. **AWS CLI**: Configure your AWS CLI with appropriate credentials.
 3. **kubectl**: Install kubectl to interact with the EKS cluster.
 
-### Deployment Steps
+### Deployment Steps📋
 
 1. **Clone the Repository:**
     ```bash
@@ -70,13 +70,13 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
     - Configured Prometheus to scrape metrics from your Kubernetes nodes and pods.
     - Created Grafana dashboards to visualize CPU, Memory, and Storage utilization.
 
-## Usage
+## Usage📝
 
 1. Access the Pac-Man game via the AWS Load Balancer URL.
 2. Use the arrow keys to navigate Pac-Man through the maze.
 3. Collect all pellets and avoid the ghosts to achieve the highest score.
 
-## Screenshots
+## Screenshots📸
 
 ![pacmanScreenShot1](https://github.com/user-attachments/assets/e8cf8d44-1075-4fdf-b1ff-867336682114)
 
@@ -84,12 +84,12 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 ![pacmanScreenShot2](https://github.com/user-attachments/assets/d1d2b45a-20d5-4eab-8fa5-d2e84ece9395)
 
 
-## Dashboard for Kubernetes Cluster Monitoring Using Grafana/Prometheus
+## Dashboard for Kubernetes Cluster Monitoring Using Grafana/Prometheus📊
 ![BeFunky-collage (2)](https://github.com/user-attachments/assets/c118d106-719b-4f1f-978b-d144825b5a44)
 
 
 
-## Contributing
+## Contributing✍
 
 We welcome contributions to improve the Pac-Man game or deployment setup. To contribute:
 
@@ -107,11 +107,11 @@ We welcome contributions to improve the Pac-Man game or deployment setup. To con
     git push origin feature/YourFeature
     ```
 
-## License
+## License🧾
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
-## Contact
+## Contact💬
 
 
 - **Name**: Idan Uziel
@@ -119,4 +119,4 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ---
 
-**Pac-Man Game - AWS Project** © 2024 by Idan Uziel. Built with ❤️ for classic arcade fans.
+**Pac-Man Game - AWS Project☁️** © 2024 by Idan Uziel. Built with ❤️ for classic arcade fans.
