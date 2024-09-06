@@ -81,7 +81,7 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 
 
 ## Dashboard for Kubernetes Cluster Monitoring Using Grafana/Prometheus📊
-I used Grafana to create dashboards that displays the overall cluster utilization in terms of CPU, Memory, Storage usage and more. it was collected by Prometheus in a visual, clear and detailed way.
+I used Grafana to create dashboards that displays the overall cluster utilization in terms of CPU, Memory, Storage usage and more. it was collected by Prometheus in a visual, clear and detailed way from localhost access.
 ![BeFunky-collage (2)](https://github.com/user-attachments/assets/c118d106-719b-4f1f-978b-d144825b5a44)
 
 
