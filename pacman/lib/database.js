@@ -1,42 +1,29 @@
 'use strict';
 
-var MongoClient = require('mongodb').MongoClient;
-var config = require('./config');
-var _db;
+const MongoClient = require('mongodb').MongoClient;
+const config = require('./config');
+let _db;
 
-function Database() {
-    this.connect = function(app, callback) {
-            MongoClient.connect(config.database.url,
-                                config.database.options,
-                                function (err, db) {
-                                    if (err) {
-                                        console.log(err);
-                                        console.log(config.database.url);
-                                        console.log(config.database.options);
-                                    } else {
-                                        _db = db;
-                                        app.locals.db = db;
-                                    }
-                                    callback(err);
-                                });
+class Database {
+    async connect(app) {
+        try {
+            const client = await MongoClient.connect(config.database.url, config.database.options);
+            _db = client.db();
+            app.locals.db = _db;
+        } catch (err) {
+            console.error('Failed to connect to database:', err);
+            console.error('URL:', config.database.url);
+            console.error('Options:', config.database.options);
+            throw err; // Rethrow to handle higher up
+        }
     }
 
-    this.getDb = function(app, callback) {
+    async getDb(app) {
         if (!_db) {
-            this.connect(app, function(err) {
-                if (err) {
-                    console.log('Failed to connect to database server');
-                } else {
-                    console.log('Connected to database server successfully');
-                }
-
-                callback(err, _db);
-            });
-        } else {
-            callback(null, _db);
+            await this.connect(app);
         }
-
+        return _db;
     }
 }
 
-module.exports = exports = new Database(); // Singleton
+module.exports = new Database();
