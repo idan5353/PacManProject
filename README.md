@@ -24,7 +24,7 @@
 
 ## Source Code</>
 
-The source code for the Pac-Man game can be found here: [Pac-Man GitHub Repository](https://github.com/idan5353/PacManProject.git).
+The source code for the Pac-Man game can be found here: [Pac-Man GitHub Repository](https://github.com/font/pacman.git).
 
 ## Requirements
 
