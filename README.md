@@ -38,7 +38,7 @@ The source code for the Pac-Man game can be found here: [Pac-Man GitHub Reposito
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/font/pacman.git
+    git clone https://github.com/idan5353/PacManProject.git
     cd pacman
     ```
 
