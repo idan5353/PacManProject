@@ -104,10 +104,6 @@ We welcome contributions to improve the Pac-Man game or deployment setup. To con
     git push origin feature/YourFeature
     ```
 
-## License🧾
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-
 ## Contact💬
 
 
