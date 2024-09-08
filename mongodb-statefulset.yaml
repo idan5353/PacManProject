@@ -1,38 +1,51 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: mongodb
-  labels:
-    app: mongodb
+  name: pacman-statefulset
 spec:
-  serviceName: "mongodb"
-  replicas: 1
+  serviceName: "pacman-headless-service"  # Headless service name used by StatefulSet
+  replicas: 2
   selector:
     matchLabels:
-      app: mongodb
+      app: pacman-game  # Ensure this matches the labels in the pod template
   template:
     metadata:
       labels:
-        app: mongodb
+        app: pacman-game  # Ensure this matches the selector
     spec:
       containers:
-      - name: mongodb
-        image: mongo:4.4  # Use the MongoDB image version that suits your needs
+      - name: pacman-game
+        image: 491085395701.dkr.ecr.us-west-2.amazonaws.com/my-app:latest
         ports:
-        - containerPort: 27017
-        volumeMounts:
-        - name: mongodb-data
-          mountPath: /data/db
+        - containerPort: 8080
         env:
-        - name: MONGO_INITDB_ROOT_USERNAME
-          value: "root"  # Set the root username
-        - name: MONGO_INITDB_ROOT_PASSWORD
-          value: "password"  # Set the root password
+        - name: MONGO_SERVICE_HOST
+          value: "mongodb"
+        - name: MONGO_DATABASE
+          value: "pacman"
+        - name: MY_MONGO_PORT
+          value: "27017"
+        - name: MONGO_USE_SSL
+          value: "false"
+        - name: MONGO_VALIDATE_SSL
+          value: "true"
+        - name: MONGO_REPLICA_SET
+          value: ""  # Set this if using replica sets
+        - name: MONGO_AUTH_USER
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongodb-root-username
+        - name: MONGO_AUTH_PWD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongodb-root-password
   volumeClaimTemplates:
   - metadata:
-      name: mongodb-data
+      name: pacman-storage
     spec:
-      accessModes: ["ReadWriteOnce"]
+      accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
           storage: 10Gi
