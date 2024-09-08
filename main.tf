@@ -195,6 +195,38 @@ resource "aws_iam_role_policy_attachment" "cni_policy" {
   policy_arn  = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
 }
 
+resource "aws_iam_policy" "eks_node_policy" {
+  name        = "eks-node-custom-policy"
+  description = "Policy to allow CodeDeploy and CloudWatch actions for EKS nodes"
+  
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "codedeploy:GetDeployment",
+          "codedeploy:GetDeploymentGroup",
+          "codedeploy:ListDeployments",
+          "codedeploy:RegisterApplicationRevision",
+          "codedeploy:CreateDeployment",
+          "codedeploy:ListApplicationRevisions",
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents",
+          "s3:GetObject"
+        ],
+        Resource = "*"
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "eks_node_policy_attachment" {
+  policy_arn = aws_iam_policy.eks_node_policy.arn
+  role      = aws_iam_role.node_instance_role.name
+}
+
 # ECR Repository
 resource "aws_ecr_repository" "app_repo" {
   name = "my-app"
